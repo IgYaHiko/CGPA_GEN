@@ -3,20 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CGPA Calculator</title>
+    <title>CGPA & GPA Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <h2>✨ CGPA Calculator</h2>
 
-    <div id="semester-list"></div>
+    <h2>✨ CGPA & GPA Calculator</h2>
 
-    <button id="add-semester" class="btn">+ Add Semester</button>
-    <button id="calculate" class="btn calc">Calculate CGPA</button>
+    <!-- Mode Selection -->
+    <div class="mode-box">
+        <label>Select Mode:</label>
+        <select id="mode" class="mode-select">
+            <option value="cgpa">Calculate CGPA (Using Semester GPA)</option>
+            <option value="gpa">Calculate GPA (Using Subject Grades)</option>
+        </select>
+    </div>
 
-    <h3 id="result"></h3>
+    <!-- CGPA Section -->
+    <div id="cgpa-section" class="section">
+        <h3>CGPA Calculator</h3>
+        <div id="semester-list"></div>
+        <button id="add-semester" class="btn">+ Add Semester</button>
+        <button id="calculate-cgpa" class="btn calc">Calculate CGPA</button>
+        <h3 id="cgpa-result"></h3>
+    </div>
+
+    <!-- GPA Section -->
+    <div id="gpa-section" class="section" style="display: none;">
+        <h3>GPA Calculator</h3>
+        <div id="subject-list"></div>
+        <button id="add-subject" class="btn">+ Add Subject</button>
+        <button id="calculate-gpa" class="btn calc">Calculate GPA</button>
+        <h3 id="gpa-result"></h3>
+    </div>
+
 </div>
 
 <script src="script.js"></script>
